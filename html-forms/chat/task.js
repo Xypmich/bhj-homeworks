@@ -29,7 +29,7 @@ widgetBtn.onclick = () => {
 };
 
 chatInput.addEventListener('keyup', key => {
-    if (key.code == 'Enter' && chatInput.value != '') {
+    if (key.code == 'Enter' && chatInput.value.trim() != '') {
         let curTime = new Date();
         messages.innerHTML += `
             <div class="message message_client">
@@ -48,5 +48,6 @@ chatInput.addEventListener('keyup', key => {
             </div>
         </div>
         `;
+            chatInput.value = '';
     }
 });
