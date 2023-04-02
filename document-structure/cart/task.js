@@ -1,14 +1,6 @@
 const products = document.querySelectorAll('.product');
 const cart = document.querySelector('.cart__products');
 
-function productInCart(prodId) {
-    let cartProducts = document.querySelectorAll('.cart__product');
-    cartProducts.forEach(cartProduct => {
-        if (cartProduct.data-id == prodId) {return false};
-    });
-    return true
-};
-
 products.forEach(product => {
     let controls = product.querySelectorAll('.product__quantity-control');
     let value = product.querySelector('.product__quantity-value');
