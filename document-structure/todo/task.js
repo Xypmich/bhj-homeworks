@@ -23,7 +23,7 @@ function addTask(tasksList, title) {
     };
 };
 
-if (localStorage.length) {
+if (localStorage.getItem('tasksList')) {
     const storageElems = JSON.parse(localStorage.getItem('tasksList'));
     for (let i = 0; i < storageElems.length; i++) {
         addTask(taskList, storageElems[i]);
